@@ -157,7 +157,7 @@ class upsample(BaseOp):
 		inp = self.inp.out
 		strd = self.lay.strd
 		shape = inp.get_shape()
-		inp = tf.image.resize_nearest_neighbor(inp, (shape[1] * strd, shape[2] * strd))
+		inp = tf.compat.v1.image.resize_nearest_neighbor(inp, (shape[1] * strd, shape[2] * strd))
 		self.out = inp
 
 	def speak(self): return 'upsample'

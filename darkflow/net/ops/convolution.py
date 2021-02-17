@@ -76,7 +76,7 @@ class convolutional(BaseOp):
 
     def batchnorm(self, layer, inp):
         if not self.var:
-            tensor, mean, variance = tf.nn.fused_batch_norm(inp, 
+            tensor, mean, variance = tf.compat.v1.nn.fused_batch_norm(inp, 
                                                             layer.w['gamma'], 
                                                             np.zeros([np.size(layer.w['gamma'])], dtype=np.float32), 
                                                             mean=layer.w['moving_mean'], 
