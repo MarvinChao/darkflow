@@ -299,8 +299,8 @@ def cfg_yielder(model, binary):
 					h, w, c = _size
 				else: 
 					h_, w_, c_ = _size
-					assert w_ == w and h_ == h, \
-					'Routing incompatible conv sizes'
+#					assert w_ == w and h_ == h, \
+#					'Routing incompatible conv sizes'
 					c += c_
 			yield ['route', i, routes]
 			l = w * h * c
