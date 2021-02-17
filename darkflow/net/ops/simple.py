@@ -127,6 +127,16 @@ class leaky(BaseOp):
 	def verbalise(self): pass
 
 
+class mish(BaseOp):
+        def forward(self):
+                self.out = self.inp.out * tf.math.tanh(
+                        tf.math.softplus(self.inp.out, name = self.scope),
+                        name = self.scope
+                )
+
+        def verbalise(self): pass
+
+
 class identity(BaseOp):
 	def __init__(self, inp):
 		self.inp = None

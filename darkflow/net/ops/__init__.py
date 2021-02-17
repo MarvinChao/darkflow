@@ -8,6 +8,7 @@ op_types = {
 	'connected': connected,
 	'maxpool': maxpool,
 	'leaky': leaky,
+        'mish': mish,
 	'dropout': dropout,
 	'flatten': flatten,
 	'avgpool': avgpool,
